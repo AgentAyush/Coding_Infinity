@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".Codes">
+
+    <ScrollView
+        android:id="@+id/scrollView4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" />
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/textview"
+        android:layout_width="346dp"
+        android:layout_height="645dp"
+        android:text="class BookListActivity : AppCompatActivity() {      var array = arrayOf(&quot;Item 1&quot;, &quot;Item 2&quot;, &quot;Item 3&quot;, &quot;Item 4&quot;, &quot;Item 5&quot;, &quot;Item 6&quot;, &quot;Item 7&quot;, &quot;Item 8&quot;, &quot;Item 9&quot;, &quot;Item 10&quot;, &quot;Item 11&quot;)      override fun onCreate(savedInstanceState: Bundle?)     {         super.onCreate(savedInstanceState)         setContentView(R.layout.book_list)          val adapter = ArrayAdapter(this, R.layout.book_list_item, R.id.book_title, array)         val listView : ListView = findViewById(R.id.book_list)         listView.adapter = adapter         } }package com.tutorialkart.anotheractivity   import android.content.Intent import android.support.v7.app.AppCompatActivity import android.os.Bundle import kotlinx.android.synthetic.main.activity_main.*   class MainActivity : AppCompatActivity() {       override fun onCreate(savedInstanceState: Bundle?) {         super.onCreate(savedInstanceState)         setContentView(R.layout.activity_main)           btnStartAnotherActivity.setOnClickListener {             val intent = Intent(this, AnotherActivity::class.java)             // start your next activity             startActivity(intent)         }       } }"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
